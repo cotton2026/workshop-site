@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>コットンパールの会</title>
+        <meta name="description" content="Craft＆Eat、手しごとの時間">
+        <link rel="icon" type="image/png" href="images/giraffelogo.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        
+        <style>
+            /* カテゴリーフィルターのスタイル */
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                justify-content: center;
+                margin: 30px 0;
+                padding: 0 20px;
+            }
+            
+            .filter-btn {
+                padding: 10px 20px;
+                background-color: #fff;
+                border: 2px solid #0bd;
+                color: #0bd;
+                border-radius: 25px;
+                cursor: pointer;
+                font-size: 14px;
+                font-weight: bold;
+                transition: all 0.3s ease;
+            }
+            
+            .filter-btn:hover {
+                background-color: #0bd;
+                color: #fff;
+                transform: translateY(-2px);
+            }
+            
+            .filter-btn.active {
+                background-color: #0bd;
+                color: #fff;
+            }
+            
+            .item {
+                transition: opacity 0.3s ease, transform 0.3s ease;
+            }
+            
+            .item.hidden {
+                display: none;
+            }
+            
+            /* レスポンシブ対応 */
+            @media (max-width: 600px) {
+                .filter-btn {
+                    padding: 8px 16px;
+                    font-size: 12px;
+                }
+                
+                .category-filters {
+                    gap: 8px;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="workshops" class="big-bg">
+            <header class="page-header wrapper">
+                <h1><a href="index.html"><img class="logo" src="images/giraffelogo.png" alt="コットンパールの会"></a></h1>
+
+                <!-- ハンバーガーボタンを追加 -->
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <nav id="nav">
+                    <ul class="main-nav">
+                        <li><a href="index.html">ホーム</a></li>
+                        <li><a href="about.html">私たちについて</a></li>
+                        <li><a href="pastworks.html">過去の作品</a></li>
+                        <li><a href="naturalstone.html">天然石のこと</a></li>
+                        <li><a href="ring-position.html">指輪の位置</a></li>
+                        <li><a href="shop.html">作品販売</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="wrapper">
+                <h2 class="page-title">past Workshop</h2>
+                <p>
+                    ココロとカラダのビタミンのコットンパールの会。毎回テーマはなく各自の作りたいものを作れるのが特徴です。<br>
+                    こちらでは過去のワークショップの作品を少しご紹介いたします。
+                </p>
+            </div><!-- /.workshops-content -->
+        </div><!-- /#workshops -->
+
+        <!-- カテゴリーフィルターボタン -->
+        <div class="wrapper">
+            <div class="category-filters">
+                <button class="filter-btn active" data-category="all">すべて</button>
+                <button class="filter-btn" data-category="ネックレス">ネックレス</button>
+                <button class="filter-btn" data-category="イヤリング">イヤリング・ピアス</button>
+                <button class="filter-btn" data-category="ブローチ">ブローチ</button>
+                <button class="filter-btn" data-category="ブレスレット">ブレスレット</button>
+                <button class="filter-btn" data-category="その他">その他</button>
+            </div>
+        </div>
+
+        <div class="wrapper grid">
+            <div class="item" data-category="ネックレス,イヤリング">
+                <img src="images/LINE_ALBUM_イヤリング・ピアス_260205_1.jpg" alt="">
+                <p>2025年9月_ひまわりネックレス＆イヤリング</p>
+            </div>
+            <div class="item" data-category="ネックレス,ブローチ">
+                <img src="images/LINE_ALBUM_ネックレス・チョーカー_260205_1.jpg" alt="">
+                <p>2025年9月_ネックレス＆ブローチ</p>
+            </div>
+            <div class="item" data-category="ネックレス">
+                <img src="images/LINE_ALBUM_ネックレス・チョーカー_260205_2.jpg" alt="">
+                <p>2025年9月_ネックレス</p>
+            </div>
+            <div class="item" data-category="イヤリング">
+                <img src="images/LINE_ALBUM_イヤリング・ピアス_260205_3.jpg" alt="">
+                <p>2025年5月_お花とパールのピアス</p>
+            </div>
+            <div class="item" data-category="ブレスレット">
+                <img src="images/IMG_ブレスレット_202509.jpg" alt="">
+                <p>2025年9月_ブレスレット</p>
+            </div>
+            <div class="item" data-category="ネックレス">
+                <img src="images/LINE_ALBUM_ネックレス・チョーカー_260205_3.jpg" alt="">
+                <p>2025年7月_ネックレス</p>
+            </div>
+            <div class="item" data-category="ブローチ">
+                <img src="images/IMG_5384.jpg" alt="">
+                <p>2025年7月_ブローチ</p>
+            </div>
+            <div class="item" data-category="ブローチ">
+                <img src="images/IMG_5385.jpg" alt="">
+                <p>2025年7月_ブローチ</p>
+            </div>
+            <div class="item" data-category="その他">
+                <img src="images/IMG_5387.jpg" alt="">
+                <p>2025年7月_バレッタ</p>
+            </div>
+            <div class="item" data-category="ネックレス">
+                <img src="images/LINE_ALBUM_ネックレス・チョーカー_260205_4.jpg" alt="">
+                <p>2025年5月_ネックレス</p>
+            </div>
+            <div class="item" data-category="ネックレス">
+                <img src="images/LINE_ALBUM_ネックレス・チョーカー_260205_5.jpg" alt="">
+                <p>2025年5月_ネックレス</p>
+            </div>
+            <div class="item" data-category="イヤリング">
+                <img src="images/LINE_ALBUM_イヤリング・ピアス_260205_3.jpg" alt="">
+                <p>2025年5月_お花とパールのピアス</p>
+            </div>
+            <div class="item" data-category="ブレスレット">
+                <img src="images/IMG_5392.jpg" alt="">
+                <p>2025年5月_ブレスレット</p>
+            </div>
+            <div class="item" data-category="ブローチ">
+                <img src="images/IMG_5393.jpg" alt="">
+                <p>2025年5月_ブローチ</p>
+            </div>
+            <div class="item" data-category="ネックレス">
+                <img src="images/LINE_ALBUM_ネックレス・チョーカー_260205_6.jpg" alt="">
+                <p>2025年4月_ネックレス</p>
+            </div>
+            <div class="item" data-category="イヤリング">
+                <img src="images/LINE_ALBUM_イヤリング・ピアス_260205_4.jpg" alt="">
+                <p>2025年4月_イヤリング＆ピアス</p>
+            </div>
+            <div class="item" data-category="ブローチ">
+                <img src="images/IMG_5395.JPG" alt="">
+                <p>2025年4月_ブローチ</p>
+            </div>
+            <div class="item" data-category="ブローチ">
+                <img src="images/IMG_5394.JPG" alt="">
+                <p>2025年4月_ブローチ</p>
+            </div>
+            <div class="item" data-category="ブローチ">
+                <img src="images/IMG_5396.JPG" alt="">
+                <p>2025年4月_ブローチ</p>
+            </div>
+            <div class="item" data-category="ネックレス">
+                <img src="images/LINE_ALBUM_ネックレス・チョーカー_260205_11.jpg" alt="">
+                <p>2025年3月_ネックレス</p>
+            </div>
+            <div class="item" data-category="ネックレス,イヤリング">
+                <img src="images/LINE_ALBUM_ネックレス・チョーカー_260205_12.jpg" alt="">
+                <p>2025年3月_ハートモチーフのネックレス＆ピアス＆イヤリング</p>
+            </div>
+            <div class="item" data-category="ネックレス,ブローチ">
+                <img src="images/LINE_ALBUM_ネックレス・チョーカー_260205_14.jpg" alt="">
+                <p>2025年3月_ネックレス＆ブローチ</p>
+            </div>
+            <div class="item" data-category="その他">
+                <img src="images/IMG_5399.JPG" alt="">
+                <p>2025年3月_リング・ブレスレット</p>
+            </div>
+            <div class="item" data-category="その他">
+                <img src="images/IMG_5398.JPG" alt="">
+                <p>2025年3月_リング・ブレスレット</p>
+            </div>
+            <div class="item" data-category="ブローチ">
+                <img src="images/IMG_5400.JPG" alt="">
+                <p>2025年3月_ブローチ</p>
+            </div>
+            <div class="item" data-category="イヤリング">
+                <img src="images/LINE_ALBUM_イヤリング・ピアス_260205_6.jpg" alt="">
+                <p>2025年11月_イヤリング</p>
+            </div>
+            <div class="item" data-category="ネックレス,イヤリング">
+                <img src="images/LINE_ALBUM_イヤリング・ピアス_260205_7.jpg" alt="">
+                <p>2024年11月_ハートモチーフのネックレス＆イヤリング</p>
+            </div>
+            <div class="item" data-category="ブローチ">
+                <img src="images/IMG_5401.JPG" alt="">
+                <p>2024年11月_ブローチ</p>
+            </div>
+            <div class="item" data-category="ネックレス">
+                <img src="images/LINE_ALBUM_ネックレス・チョーカー_260205_16.jpg" alt="">
+                <p>2024年10月_レジンネックレス</p>
+            </div>
+            <div class="item" data-category="ネックレス">
+                <img src="images/LINE_ALBUM_ネックレス・チョーカー_260205_22.jpg" alt="">
+                <p>2024年10月_ネックレス</p>
+            </div>
+            <div class="item" data-category="ネックレス,イヤリング">
+                <img src="images/LINE_ALBUM_ネックレス・チョーカー_260205_23.jpg" alt="">
+                <p>2024年10月_イヤリング＆ネックレス</p>
+            </div>
+            <div class="item" data-category="ブローチ">
+                <img src="images/IMG_5402.JPG" alt="">
+                <p>2024年10月_ブローチ</p>
+            </div>
+            <div class="item" data-category="ネックレス">
+                <img src="images/LINE_ALBUM_ネックレス・チョーカー_260205_25.jpg" alt="">
+                <p>2024年7月_ネックレス</p>
+            </div>
+            <div class="item" data-category="イヤリング">
+                <img src="images/LINE_ALBUM_イヤリング・ピアス_260205_9.jpg" alt="">
+                <p>2024年7月_ピアス</p>
+            </div>
+            <div class="item" data-category="ブローチ">
+                <img src="images/IMG_5403.JPG" alt="">
+                <p>2024年7月_ブローチ</p>
+            </div>
+            <div class="item" data-category="ネックレス,ブローチ">
+                <img src="images/LINE_ALBUM_ネックレス・チョーカー_260205_31.jpg" alt="">
+                <p>2024年6月_ネックレス＆ブローチ</p>
+            </div>
+            <div class="item" data-category="ブレスレット">
+                <img src="images/IMG_5406.JPG" alt="">
+                <p>2024年6月_ブレスレット</p>
+            </div>
+            <div class="item" data-category="イヤリング">
+                <img src="images/LINE_ALBUM_イヤリング・ピアス_260205_10.jpg" alt="">
+                <p>2024年5月_イヤリング</p>
+            </div>
+            <div class="item" data-category="ネックレス">
+                <img src="images/LINE_ALBUM_ネックレス・チョーカー_260205_33.jpg" alt="">
+                <p>2024年5月_ネックレス他</p>
+            </div>
+            <div class="item" data-category="ネックレス">
+                <img src="images/LINE_ALBUM_ネックレス・チョーカー_260205_30.jpg" alt="">
+                <p>2024年5月_ネックレス</p>
+            </div>
+            <div class="item" data-category="ブレスレット">
+                <img src="images/IMG_5407.JPG" alt="">
+                <p>2024年5月_ブレスレット</p>
+            </div>
+            <div class="item" data-category="ブローチ">
+                <img src="images/IMG_5408.JPG" alt="">
+                <p>2024年5月_ブローチ</p>
+            </div>
+         </div>
+            <!-- /.grid -->
+
+        <footer>
+            <div class="wrapper">
+                <p><small>&copy; 2026 [Club Cotton pearl] All rights reserved.</small></p>
+            </div>
+        </footer>
+                <!-- JavaScriptを追加（</body>の直前） -->
+        <script>
+            const hamburger = document.getElementById('hamburger');
+            const nav = document.getElementById('nav');
+
+            // ハンバーガーメニューの開閉
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                nav.classList.toggle('active');
+            });
+
+            // メニュー項目クリック時に閉じる
+            const navLinks = nav.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    nav.classList.remove('active');
+                });
+            });
+
+            // メニュー外をクリックしたら閉じる
+            document.addEventListener('click', (e) => {
+                if (!hamburger.contains(e.target) && !nav.contains(e.target)) {
+                    hamburger.classList.remove('active');
+                    nav.classList.remove('active');
+                }
+            });
+
+            // カテゴリーフィルター機能
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const items = document.querySelectorAll('.item');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // すべてのボタンからactiveクラスを削除
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // クリックされたボタンにactiveクラスを追加
+                    btn.classList.add('active');
+
+                    const category = btn.getAttribute('data-category');
+
+                    items.forEach(item => {
+                        const itemCategories = item.getAttribute('data-category');
+                        
+                        if (category === 'all') {
+                            // すべて表示
+                            item.classList.remove('hidden');
+                        } else {
+                            // カテゴリーに一致するものを表示
+                            if (itemCategories && itemCategories.includes(category)) {
+                                item.classList.remove('hidden');
+                            } else {
+                                item.classList.add('hidden');
+                            }
+                        }
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

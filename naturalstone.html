@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>コットンパールの会</title>
+        <meta name="description" content="Craft＆Eat、手しごとの時間">
+        <link rel="icon" type="image/png" href="images/giraffelogo.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+
+        <style>
+            /* フィルターボタンのスタイル */
+            .filter-buttons {
+                text-align: center;
+                margin: 40px 0;
+                padding: 20px;
+                background-color: rgba(255, 255, 255, 0.9);
+                border-radius: 10px;
+            }
+            
+            .filter-buttons button {
+                margin: 5px;
+                padding: 12px 20px;
+                border: 2px solid #b8956a;
+                background-color: #fff;
+                color: #432;
+                cursor: pointer;
+                border-radius: 25px;
+                font-size: 14px;
+                font-weight: bold;
+                transition: all 0.3s ease;
+                outline: none;
+            }
+            
+            .filter-buttons button:hover {
+                background-color: #b8956a;
+                color: #fff;
+                transform: translateY(-2px);
+                box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            }
+            
+            .filter-buttons button.active {
+                background-color: #b8956a;
+                color: #fff;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            }
+            
+            /* グリッドアイテムの表示制御 */
+            .item {
+                transition: all 0.3s ease;
+            }
+            
+            .item.hidden {
+                display: none;
+            }
+            
+            /* レスポンシブ対応 */
+            @media (max-width: 768px) {
+                .filter-buttons button {
+                    padding: 10px 15px;
+                    font-size: 12px;
+                    margin: 3px;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="naturalstone" class="big-bg">
+            <header class="page-header wrapper">
+                <h1><a href="index.html"><img class="logo" src="images/giraffelogo.png" alt="コットンパールの会"></a></h1>
+                
+                <!-- ハンバーガーボタンを追加 -->
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <nav id="nav">
+                    <ul class="main-nav">
+                        <li><a href="index.html">ホーム</a></li>
+                        <li><a href="about.html">私たちについて</a></li>
+                        <li><a href="pastworks.html">過去の作品</a></li>
+                        <li><a href="naturalstone.html">天然石のこと</a></li>
+                        <li><a href="ring-position.html">指輪の位置</a></li>
+                        <li><a href="shop.html">作品販売</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="naturalstone-content wrapper">
+                <h2 class="page-title">naturalstone</h2>
+                <p>
+                    種類も多く特殊なパワーを持つ天然石。<br>
+                    そのことからお守りとして使われることも多いです。
+                    ここでは誕生石を中心とした石の石言葉について少しご説明いたします。
+                </p>
+                <p>
+                    ”誕生石”とは？<br>
+                    1月から12月までの各月に割り当てられた宝石のことで、身につけると幸運を招き、災いから身を守るとされるお守りです。
+                </p>
+            </div><!-- /.naturalstone-content -->
+        </div><!-- /#naturalstone -->
+
+        <!-- 月別フィルターボタン -->
+        <div class="wrapper">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-month="all">すべて</button>
+                <button class="filter-btn" data-month="1">1月</button>
+                <button class="filter-btn" data-month="2">2月</button>
+                <button class="filter-btn" data-month="3">3月</button>
+                <button class="filter-btn" data-month="4">4月</button>
+                <button class="filter-btn" data-month="5">5月</button>
+                <button class="filter-btn" data-month="6">6月</button>
+                <button class="filter-btn" data-month="7">7月</button>
+                <button class="filter-btn" data-month="8">8月</button>
+                <button class="filter-btn" data-month="9">9月</button>
+                <button class="filter-btn" data-month="10">10月</button>
+                <button class="filter-btn" data-month="11">11月</button>
+                <button class="filter-btn" data-month="12">12月</button>
+            </div>
+        </div>
+
+
+        <div class="wrapper grid">
+            <div class="item" data-month="1">
+                <img src="images/1月_ガーネット .png" alt="">
+                <p>【1月の誕生石】ガーネット：石言葉は「真実」「友愛」「情熱」「繁栄」</p>
+            </div>
+            <div class="item" data-month="2">
+                <img src="images/2月_アメジスト.png" alt="">
+                <p>【2月の誕生石】アメジスト：石言葉は「誠実」「調和」「心の平和・鎮静」「知恵と直感力 」</p>
+            </div>
+            <div class="item" data-month="2">
+                <img src="images/2月_クリソベリル・キャッツ・アイ.png" alt="">
+                <p>【2月の誕生石】クリソベリル・キャッツ・アイ：石言葉は「守護」「慈愛」「寛大な心」「希望」「驚愕」 </p>
+            </div>
+            <div class="item" data-month="3">
+                <img src="images/3月_アクアマリン.png" alt="">
+                <p>【3月の誕生石】アクアマリン：石言葉は「勇敢」「聡明」「幸福」「穏やかな心」</p>
+            </div>
+            <div class="item" data-month="3">
+                <img src="images/3月_サンゴ.png" alt="">
+                <p>【3月の誕生石】サンゴ：石言葉は「幸福」「長寿」「長寿の祝福」「知恵」</p>
+            </div>
+            <div class="item" data-month="3">
+                <img src="images/3月_ブラッドストーン.png" alt="">
+                <p>【3月の誕生石】ブラッドストーン：石言葉は「勇気」「活力」「熱血」「神聖」「献身」</p>
+            </div>
+            <div class="item" data-month="4">
+                <img src="images/4月_ダイヤモンド.png" alt="">
+                <p>【4月の誕生石】ダイヤモンド：石言葉は「永遠の絆」「純潔」「不屈」「無敵」「純愛」</p>
+            </div>
+            <div class="item" data-month="4">
+                <img src="images/4月_モルガナイト.png" alt="">
+                <p>【4月の誕生石】モルガナイト：石言葉は「愛情」「慈悲」「清純」「優美」「優しさ」「深い愛」「精神的安定 」</p>
+            </div>
+            <div class="item" data-month="5">
+                <img src="images/5月_エメラルド.png" alt="">
+                <p>【5月の誕生石】エメラルド：石言葉は「幸運」「幸福」「夫婦愛」「安定」「希望」「喜び」</p>
+            </div>
+            <div class="item" data-month="5">
+                <img src="images/5月_ヒスイ.png" alt="">
+                <p>【5月の誕生石】ヒスイ：石言葉は「長寿」「繁栄」「幸福」「忍耐」「調和」「飛躍」</p>
+            </div>
+            <div class="item" data-month="6">
+                <img src="images/6月_真珠.png" alt="">
+                <p>【6月の誕生石】真珠：石言葉は「健康」「純粋」「長寿」「富」「円満」</p>
+            </div>
+            <div class="item" data-month="6">
+                <img src="images/6月_ムーンストーン.png" alt="">
+                <p>【6月の誕生石】ムーンストーン：石言葉は「月」「やさしさ」「健康」「幸運」「恋の予感」</p>
+            </div>
+            <div class="item" data-month="7">
+                <img src="images/7月_ルビー.png" alt="">
+                <p>【7月の誕生石】ルビー：石言葉は 「情熱」「勇気」「勝利」「愛」「威厳」「慈しみ」</p>
+            </div>
+            <div class="item" data-month="7">
+                <img src="images/7月_スフェーン.png" alt="">
+                <p>【7月の誕生石】スフェーン：石言葉は 「成功」「永久不変」「才能の開花」「創造力」</p>
+            </div>
+            <div class="item" data-month="8">
+                <img src="images/8月_ペリドット.png" alt="">
+                <p>【8月の誕生石】ペリドット：石言葉は「夫婦愛」「幸福」「平和」「和合」</p>
+            </div>
+            <div class="item" data-month="8">
+                <img src="images/8月_サードオニックス.png" alt="">
+                <p>【8月の誕生石】サードオニックス：「幸せな結婚」「夫婦の幸福」「夫婦円満」「成功」「厄除け」</p>
+            </div>
+            <div class="item" data-month="9">
+                <img src="images/9月_サファイヤ.png" alt="">
+                <p>【9月の誕生石】サファイヤ：石言葉は「慈愛」「誠実」「真理」「高潔」「徳望」</p>
+            </div>
+            <div class="item" data-month="9">
+                <img src="images/9月_クンツァイト.png" alt="">
+                <p>【9月の誕生石】クンツァイト：石言葉は「無償の愛」「無限の愛」「純粋さ」「可憐さ」「穏やかさ」</p>
+            </div>
+            <div class="item" data-month="10">
+                <img src="images/10月_オパール.png" alt="">
+                <p>【10月の誕生石】オパール：石言葉は「希望」「幸福」「安楽」「純真無垢」「歓喜」</p>
+            </div>
+            <div class="item" data-month="10">
+                <img src="images/10月_トルマリン.png" alt="">
+                <p>【10月の誕生石】トルマリン：石言葉は「希望」「心中の歓喜」「安楽」「忍耐」</p>
+            </div>
+            <div class="item" data-month="11">
+                <img src="images/11月_トパーズ.png" alt="">
+                <p>【11月の誕生石】トパーズ：石言葉は「誠実」「友愛」「希望」「成功」「潔白」</p>
+            </div>
+            <div class="item" data-month="11">
+                <img src="images/11月_シトリン.png" alt="">
+                <p>【11月の誕生石】シトリン：石言葉は「幸福」「友情」「社交性」「自信」「希望」「商売繁盛」</p>
+            </div>
+            <div class="item" data-month="12">
+                <img src="images/12月_トルコ石.png" alt="">
+                <p>【12月の誕生石】トルコ石：石言葉は「成功」「繁栄」「強運」「健康」「安全」</p>
+            </div>
+            <div class="item" data-month="12">
+                <img src="images/12月_ラピスラズリ.png" alt="">
+                <p>【12月の誕生石】ラピスラズリ：石言葉は「真実」「成功の保証」「幸福」「健康」「崇高」</p>
+            </div>
+            <div class="item" data-month="12">
+                <img src="images/12月_タンザナイト.png" alt="">
+                <p>【12月の誕生石】タンザナイト：石言葉は「高貴」「冷静」「神秘」「変化」</p>
+            </div>
+
+        </div><!-- /.grid -->
+
+        <footer>
+            <div class="wrapper">
+                <p><small>&copy; 2026 [Club Cotton pearl] All rights reserved.</small></p>
+            </div>
+        </footer>
+                <!-- JavaScriptを追加（</body>の直前） -->
+        <script>
+            const hamburger = document.getElementById('hamburger');
+            const nav = document.getElementById('nav');
+
+            // ハンバーガーメニューの開閉
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                nav.classList.toggle('active');
+            });
+
+            // メニュー項目クリック時に閉じる
+            const navLinks = nav.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    nav.classList.remove('active');
+                });
+            });
+
+            // メニュー外をクリックしたら閉じる
+            document.addEventListener('click', (e) => {
+                if (!hamburger.contains(e.target) && !nav.contains(e.target)) {
+                    hamburger.classList.remove('active');
+                    nav.classList.remove('active');
+                }
+            });
+             // 月別フィルター機能
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const items = document.querySelectorAll('.item');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const selectedMonth = button.getAttribute('data-month');
+                    
+                    // アクティブボタンの切り替え
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    
+                    // アイテムの表示/非表示
+                    items.forEach(item => {
+                        const itemMonth = item.getAttribute('data-month');
+                        
+                        if (selectedMonth === 'all') {
+                            item.classList.remove('hidden');
+                        } else if (itemMonth === selectedMonth) {
+                            item.classList.remove('hidden');
+                        } else {
+                            item.classList.add('hidden');
+                        }
+                    });
+                    
+                    // スムーズにスクロール
+                    document.querySelector('.grid').scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'nearest' 
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

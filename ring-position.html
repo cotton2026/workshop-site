@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>指輪をつける位置と効果 | コットンパールの会</title>
+        <meta name="description" content="Craft＆Eat、手しごとの時間">
+        <link rel="icon" type="image/png" href="images/giraffelogo.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+
+        <style>
+        </style>
+    </head>
+
+    <body>
+        <div id="ringposition" class="big-bg">
+            <header class="page-header wrapper">
+                <h1><a href="index.html"><img class="logo" src="images/giraffelogo.png" alt="コットンパールの会"></a></h1>
+                
+                <!-- ハンバーガーボタンを追加 -->
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <nav id="nav">
+                    <ul class="main-nav">
+                        <li><a href="index.html">ホーム</a></li>
+                        <li><a href="about.html">私たちについて</a></li>
+                        <li><a href="pastworks.html">過去の作品</a></li>
+                        <li><a href="naturalstone.html">天然石のこと</a></li>
+                        <li><a href="ring-position.html">指輪の位置</a></li>
+                        <li><a href="shop.html">作品販売</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="wrapper">
+                <h2 class="page-title">Ring Position</h2>
+            </div>
+        </div>
+
+        <div class="ring-position-content wrapper">
+            <!-- <div class="ring-intro"> -->
+                <h3>指輪をつける位置と効果</h3>
+                <p>
+                    指輪はつける指や左右で意味が異なり、右手は「現実的な力・行動」、左手は「精神的な力・信頼」を象徴します。 <br>親指は信念・目標達成、人差し指は行動力・集中力、中指は直感・協調性、薬指は愛・絆、小指はチャンス・魅力を表すため、願いや気分に合わせて指を選ぶのがおすすめです。 
+                </p>
+            </div>
+<!-- 削除した部分の代わりに以下を追加 -->
+<div style="text-align: center; margin: 20px auto 60px;">
+    <img src="images/ringimage.jpg" alt="指輪の意味" style="max-width: 100%; height: auto; width: 800px;">
+</div>
+
+
+
+        <footer>
+            <div class="wrapper">
+                <p><small>&copy; 2026 [Club Cotton pearl] All rights reserved.</small></p>
+            </div>
+        </footer>
+
+        <!-- JavaScriptを追加（</body>の直前） -->
+        <script>
+            const hamburger = document.getElementById('hamburger');
+            const nav = document.getElementById('nav');
+
+            // ハンバーガーメニューの開閉
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                nav.classList.toggle('active');
+            });
+
+            // メニュー項目クリック時に閉じる
+            const navLinks = nav.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    nav.classList.remove('active');
+                });
+            });
+
+            // メニュー外をクリックしたら閉じる
+            document.addEventListener('click', (e) => {
+                if (!hamburger.contains(e.target) && !nav.contains(e.target)) {
+                    hamburger.classList.remove('active');
+                    nav.classList.remove('active');
+                }
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>コットンパールの会 - ブログ</title>
+        <meta name="description" content="Craft＆Eat、手しごとの時間">
+        <link rel="icon" type="image/png" href="images/giraffelogo.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+        </style>
+   </head>
+
+    <body>
+        <div id="about" class="big-bg">
+            <header class="page-header wrapper">
+                <h1><a href="index.html"><img class="logo" src="images/giraffelogo.png" alt="コットンパールの会"></a></h1>
+                
+                <!-- ハンバーガーボタンを追加 -->
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <nav id="nav">
+                    <ul class="main-nav">
+                        <li><a href="index.html">ホーム</a></li>
+                        <li><a href="about.html">私たちについて</a></li>
+                        <li><a href="pastworks.html">過去の作品</a></li>
+                        <li><a href="naturalstone.html">天然石のこと</a></li>
+                        <li><a href="ring-position.html">指輪の位置</a></li>
+                        <li><a href="shop.html">作品販売</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="wrapper">
+                <h2 class="page-title">ABOUT & Blog</h2>
+                <p>
+                    コットンパールの会（Club Cotton pearl）は月に一度のペースで開催されるハンドメイドアクセサリーのワークショップです。<br>
+                    アクセサリー作りの楽しさと、おいしい食事&スイーツで心満たされる、癒しのワークショップにぜひお越しください♪
+                </p>
+            </div><!-- /.wrapper -->
+        </div><!-- /#about -->
+
+        <!-- カテゴリーフィルター -->
+        <div class="wrapper">
+            <div class="category-filter">
+                <button class="filter-btn active" data-category="all">すべて</button>
+                <button class="filter-btn" data-category="活動報告">活動報告</button>
+                <button class="filter-btn" data-category="今月のビタミン♡">今月のビタミン♡</button>
+                <button class="filter-btn" data-category="天然石のこと">天然石のこと</button>
+                <button class="filter-btn" data-category="作品ギャラリー">作品ギャラリー</button>
+            </div>
+            <div class="article-count" id="articleCount"></div>
+        </div>
+
+        <div class="about-contents wrapper">
+            <div id="articlesContainer">
+                <!-- 記事はJavaScriptで動的に生成されます -->
+            </div>
+
+            <aside>
+                <h3 class="sub-title">CCPについて</h3>
+                <p>  
+                     CCPはClub Cotton pearl (コットンパールの会)の略称です。
+                    2017年8月にスタートしたハンドメイドアクセサリーのワークショップ・コットンパールの会は早くも来年で10年目を迎えようとしています。
+                    月に一度のペースで開催され、作った後の美味しい食事やスイーツタイムでは体の内側からも癒やされますよ♪
+                </p>
+
+                <h3 class="sub-title">カテゴリー</h3>
+                <ul class="sub-menu">
+                    <li><a href="#" class="category-link" data-category="活動報告">活動報告</a></li>
+                    <li><a href="#" class="category-link" data-category="今月のビタミン♡">今月のビタミン♡</a></li>
+                    <li><a href="#" class="category-link" data-category="天然石のこと">天然石のこと</a></li>
+                    <li><a href="#" class="category-link" data-category="作品ギャラリー">作品ギャラリー</a></li>
+                </ul>
+
+            </aside>
+        </div><!-- /.about-contents -->
+
+        <footer>
+            <div class="wrapper">
+                <p><small>&copy; 2026 [Club Cotton pearl] All rights reserved.</small></p>
+            </div>
+        </footer>
+
+        <!-- 記事データとスクリプト -->
+         <script src="js/blog-data.js"></script>
+         <script src="js/blog.js"></script>        
+        <!-- ハンバーガーメニュー -->
+        <script>
+            const hamburger = document.getElementById('hamburger');
+            const nav = document.getElementById('nav');
+
+            // ハンバーガーメニューの開閉
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                nav.classList.toggle('active');
+            });
+
+            // メニュー項目クリック時に閉じる
+            const navLinks = nav.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    nav.classList.remove('active');
+                });
+            });
+
+            // メニュー外をクリックしたら閉じる
+            document.addEventListener('click', (e) => {
+                if (!hamburger.contains(e.target) && !nav.contains(e.target)) {
+                    hamburger.classList.remove('active');
+                    nav.classList.remove('active');
+                }
+            });
+        </script>
+    </body>
+</html>

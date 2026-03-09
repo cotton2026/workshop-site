@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>コットンパールの会</title>
+        <meta name="description" content="Craft＆Eat、手しごとの時間">
+        <link rel="icon" type="image/png" href="images/giraffelogo.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <div id="contact" class="big-bg">
+            <header class="page-header wrapper">
+                <h1><a href="index.html"><img class="logo" src="images/giraffelogo.png" alt="コットンパールの会"></a></h1>
+                
+                <!-- ハンバーガーボタンを追加 -->
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <nav id="nav">
+                    <ul class="main-nav">
+                        <li><a href="index.html">ホーム</a></li>
+                        <li><a href="about.html">私たちについて</a></li>
+                        <li><a href="pastworks.html">過去の作品</a></li>
+                        <li><a href="naturalstone.html">天然石のこと</a></li>
+                        <li><a href="shop.html">作品販売</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+   <div class="wrapper">
+    <h2 class="page-title">Contact</h2>
+    
+ <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe1fSfAtnuJ0LSQQ6PthnzReMB5KdkQ6lhvyaIs9SHLHEExXw/viewform?embedded=true" 
+            width="100%" 
+            height="800" 
+            frameborder="0" 
+            marginheight="0" 
+            marginwidth="0">
+        読み込んでいます…
+    </iframe> 
+    
+   </div>       <!-- /#contact -->
+
+        <section id="location">
+            <div class="wrapper">
+                <div class="location-info">
+                    <h3 class="sub-title">ワークショップ　開催場所</h3>
+                    <p>
+                        住所： 富山県富山市（南富山エリア）<br>
+                        料理教室の先生の個人宅で行っていますので参加される方に詳細場所をメールにてお知らせいたします。<br>
+                        【お問い合わせ】<br>
+                        ◆電話： 080-3402-✕✕✕✕ <br>（アクセサリー担当：小西）<br>
+                        ◆メール： konitan✕✕✕@gmail.com <br>（アクセサリー担当：小西）<br>
+                        ◆受付時間： 平日12：00～13：00、<br> 土日10：00～15：00<br>
+                        ◆休日：不定休
+                    </p>
+                </div><!-- /.location-info -->
+                <div class="location-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6401.283200218095!2d137.22177629400235!3d36.65907184587256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff791c170a89cef%3A0xc5aab680302d0ffc!2z44CSOTM5LTgwNTUg5a-M5bGx55yM5a-M5bGx5biC5LiL5aCA!5e0!3m2!1sja!2sjp!4v1770099647212!5m2!1sja!2sjp" width="800" height="300" frameborder="0" style="border:0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div><!-- /.location-map -->
+            </div><!-- /.wrapper -->
+        </section><!-- /#location -->
+
+        <section id="sns">
+            <div class="wrapper">
+                <div class="sns-box">
+                    <h3 class="sub-title">facebook</h3>
+                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcinqdeux52.net%2Freviews%3Flocale%3Dja_JP&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                </div>
+            </div><!-- /.wrapper -->
+        </section><!-- /#sns -->
+
+        <footer>
+            <div class="wrapper">
+                <p><small>&copy; 2026 [Club Cotton pearl] All rights reserved.</small></p>
+            </div>
+        </footer>
+                <!-- JavaScriptを追加（</body>の直前） -->
+        <script>
+            const hamburger = document.getElementById('hamburger');
+            const nav = document.getElementById('nav');
+
+            // ハンバーガーメニューの開閉
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                nav.classList.toggle('active');
+            });
+
+            // メニュー項目クリック時に閉じる
+            const navLinks = nav.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    nav.classList.remove('active');
+                });
+            });
+
+            // メニュー外をクリックしたら閉じる
+            document.addEventListener('click', (e) => {
+                if (!hamburger.contains(e.target) && !nav.contains(e.target)) {
+                    hamburger.classList.remove('active');
+                    nav.classList.remove('active');
+                }
+            });
+        </script>
+    </body>
+</html>
