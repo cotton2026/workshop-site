@@ -30,7 +30,7 @@ img {
 
 /* 見出し */
 .page-title {
-    font-size: 5rem;
+    font-size: 4rem;
     font-family: 'Philosopher', serif;
     text-transform: uppercase;
     font-weight: normal;
@@ -197,7 +197,7 @@ nav.active {
     border-radius: 10px; /*角を丸く*/
 }
 .home-content p {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     margin: 10px 0 42px;
 }
 /* about
