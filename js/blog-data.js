@@ -49,7 +49,7 @@ const blogPosts = [
         date: "4/04",
         year: "2026",
         category: "活動報告",
-        image: "images/Image_fx (1).png",
+        image: "images/April workshop.jpg",
         imageAlt: "ワークショップイメージ",
         content: [
             "半年ぶりのワークショップはどうなることか…ととても緊張しましたが",
