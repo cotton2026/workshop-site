@@ -200,6 +200,9 @@ nav.active {
     font-size: 0.8rem;
     margin: 10px 0 42px;
 }
+.home-content h3 {
+    font-size: 1.1rem;
+}
 /* about
 ------------------------------- */
 #about {
