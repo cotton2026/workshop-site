@@ -81,7 +81,7 @@ const blogPosts = [
         date: "6/6",
         year: "2026",
         category: "活動報告",
-        image: "images/2026July workshop",
+        image: "images/2026July workshop.png",
         imageAlt: "ワークショップイメージ",
         content: [
             "今回はインフィニティリングにも挑戦！",
