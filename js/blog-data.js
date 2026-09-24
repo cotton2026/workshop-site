@@ -115,7 +115,7 @@ const blogPosts = [
         date: "9/13",
         year: "2026",
         category: "活動報告",
-        image: "images/2026July workshop.png",
+        image: "images/2026September workshop.png",
         imageAlt: "ワークショップイメージ",
         content: [
             "いつもは土曜日の開催なのですが",
