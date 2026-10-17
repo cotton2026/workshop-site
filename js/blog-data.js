@@ -132,7 +132,7 @@ const blogPosts = [
         date: "10/10",
         year: "2026",
         category: "活動報告",
-        image: "images/2026September workshop.png",
+        image: "images/やわらかな光の療養ベッドルーム.png",
         imageAlt: "ワークショップイメージ",
         content: [
             "10月10日開催予定でしたが",
